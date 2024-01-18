@@ -1,2 +1,1 @@
-# CollegeProject_i
-college project - >AN ONLINE AUCTION SYSTEM made using PHP, javascript, HTML, CSS
+AN ONLINE AUCTION SYSTEM using PHP, javascript, HTML, CSS
