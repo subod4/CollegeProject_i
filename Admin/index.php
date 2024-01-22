@@ -63,14 +63,41 @@
                             }else {
                                 die("something went wrong");
                             }
+                            
 
                         }
+                        
+                             
             
             }
+            if (isset($_GET['delete'])) {
+                require_once "dbconnect.php";
+                $id = $_GET['delete'];
+            
+                // Retrieve the product image filename before deletion
+                $stmt = mysqli_prepare($conn, "SELECT productImage FROM products WHERE id = ?");
+                mysqli_stmt_bind_param($stmt, "i", $id);
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_bind_result($stmt, $productImage);
+                mysqli_stmt_fetch($stmt);
+                mysqli_stmt_close($stmt);
+            
+                // Delete the product from the database
+                mysqli_query($conn, "DELETE FROM products WHERE id = $id");
+            
+                // Remove the associated image file
+                $imagePath = "../Uploads/" . $productImage;
+                if (file_exists($imagePath)) {
+                    unlink($imagePath); // Remove the file from the directory
+                }
+            
+                header('location: index.php');
+            }
+            
         
             ?>     
                 <div class="container">
-                    <h1>Welcome to Admin Dashboard</h1>
+                    <h1>Welcome to Admin Dashboard </h1>
                     <a href="logout.php" class="btn btn-warning">Logout</a>
                 </div>
                 <div class ="container">
@@ -97,6 +124,7 @@
                                     <td>Product Image</td>
                                     <td>Product Name</td>
                                     <td>Product Baseprice</td>
+                                    <td>Action</td>
                                 </tr>
                             </thead>
                             <?php while($row = mysqli_fetch_assoc($select)){ ?>
@@ -104,6 +132,10 @@
                                     <td><img src="../Uploads/<?php echo $row['productImage']; ?>" height="100" alt=""></td>
                                     <td><?php echo $row['productName']; ?></td>
                                     <td>$<?php echo $row['productPrice']; ?>/-</td>
+                                    <td>
+                                        <a href="updateproduct.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a>
+                                        <a href="index.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i> delete </a>
+                                    </td>
             
                                 </tr>
                             <?php } ?>
