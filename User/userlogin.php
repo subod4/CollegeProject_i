@@ -37,7 +37,8 @@ if (isset($_POST["login"])) {
     if ($user) {
                 if (password_verify($password, $user["password"])) {
                     session_start();
-                    $_SESSION["user"] = "yes";
+                    $_SESSION["user"] = $user["id"];
+                    $_SESSION["logged_in"] = true; 
                     header("Location: index.php");
                     die();
                 }else{

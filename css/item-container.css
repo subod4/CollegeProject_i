@@ -1,78 +1,162 @@
 .lots{
-  color: #ffffff;
   text-align: center;
+  color: #fff;
 }
-body {
-    background-color: #000;
+.bigcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
 }
 .item-container {
-    align-self: center;
-    display: flex;
-    border: 1px solid #ddd;
-    padding: 20px;
-    max-width: 1000px;
-    height: 200px;
-    margin: 10px auto; 
-    color: #fff;
-   
-  }
-
-  .item-image {
-    width: 200px;
-    height: 200px;
-    margin-right: 10px;
-  }
-
-  .item-details {
-    display: flex;
-    flex-direction: column;
- 
-  }
-
-  .item-name {
-    font-size: 18px;
-    margin-bottom: 5px;
-    padding: 10px 10px;
-  }
-
-  .item-price-condition {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-    padding: 10px 10px;
-    color: #fff;
-  }
-
-  .price, .condition {
-    color: #e7e7e7;
-    padding: 5px 10px;
-    border-radius: 4px;
-    border: 1px solid #828181;
+  max-height: 300px;
+  width: 1000px;
+  display: flex;
+  flex-direction: row; /* Change to row for side-by-side layout */
+  border: none;
+  padding: 20px;
+  background-color: #00000081;
 }
 
-  .item-condition {
-    margin-right: 250px;
-  }
-  .item-description {
-    color: white;
-    user-select: none;
-    outline: none;
-    border: none;
-    padding: 10px 10px;
-    background-color: #252525;
-  }
+.item-image {
+  width: 200px; /* Adjust width as needed */
+  height: 200px;
+  object-fit: cover;
+  /* Add margin-right for spacing between image and content */
+  margin-right: 10px;
+}
 
-  .item-button {
-    align-self: flex-start;
-    margin-top: 10PX;
-    padding: 10px 10px;
-    background-color: #ff9000;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-  }
+.item-details {
+  flex: 1; /* Expand to fill remaining space */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: #d3d3d3;
+}
+
+.item-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item-price-condition {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.item-price-container,
+.item-condition {
+  display: flex;
+  align-items: center;
+}
+
+.price,
+.condition {
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid #828181;
+  color: #e7e7e7;
+}
+
+.item-description {
+  height: 100px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #00000081;
+  color: #ddd;
+}
+
+.item-button {
+  background-color: #ff9000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+}
+/* CSS for placing bid section */
+.item-container_1 {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.item-image_1 {
+  width: 30%; /* Adjust width as needed */
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.item-details_1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.item-name_1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.item-price-condition_1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.item-price-container_1,
+.item-condition_1 {
+  display: flex;
+  align-items: center;
+}
+
+.price_1,
+.condition_1 {
+  font-weight: bold;
+}
+
+.item-description_1 {
+  height: 100px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.bidding-section_1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.bidding-section_1 label {
+  margin-bottom: 5px;
+}
+
+#bid-amount_1 {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.bidding-section_1 button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+

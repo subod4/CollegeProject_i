@@ -1,7 +1,24 @@
 body
 {
     background-color: #000000;
+    background-image: url('../images/auction.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #fe9800;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+.btn:hover {
+    background-color: #fe9800;
+  }
 #header
 {
     display: flex;
@@ -60,47 +77,37 @@ body
 }
 
 #hero body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
 
-  #hero  .hero-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    color: #fff;
-    margin-right: 20px; /* Adjust the margin as needed */
-  }
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-image: url('../images/auction.jpg'); URL of your background image */
+  background-size: cover; /* Adjust background size as needed */
+  color: #fff;
+  text-align: center;
+}
 
-  #hero  h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
+#hero .hero-container {
+  max-width: 600px; /* Adjust max-width as needed */
+  padding: 20px;
+}
 
-  #hero  p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
+#hero .hero-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
 
-  #hero   a {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: #fe9800;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
+#hero .hero-container p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
 
-  #hero  a:hover {
-    background-color: #fe9800;
-  }
 
   #hero  .hero-image {
     max-width: 100%; /* Ensure the image doesn't exceed its container */

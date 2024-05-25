@@ -1,134 +1,171 @@
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
- }
- .btn{
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    border-radius: .5rem;
-    margin-top: 1rem;
-    font-size: 1.7rem;
-    padding:1rem 3rem;
-    background: var(--green);
-    color:var(--white);
-    text-align: center;
- }
- 
- .btn:hover{
-    background: var(--black);
- }
- 
- .message{
-    display: block;
-    background: var(--bg-color);
-    padding:1.5rem 1rem;
-    font-size: 2rem;
-    color:var(--black);
-    margin-bottom: 2rem;
-    text-align: center;
- }
-.container{
-    max-width: 1200px;
-    padding:2rem;
-    margin:0 auto;
- }
- 
- .admin_product_form_container_centered{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    
- }
- 
- .admin_product_form_container form{
-    max-width: 50rem;
-    margin:0 auto;
-    padding:2rem;
-    border-radius: .5rem;
-    background: var(--bg-color);
- }
- 
- .admin_product_form_container form h3{
-    text-transform: uppercase;
-    color:var(--black);
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 2.5rem;
- }
- 
- .admin_product_form_container form .box{
-    width: 100%;
-    border-radius: .5rem;
-    padding:1.2rem 1.5rem;
-    font-size: 1.7rem;
-    margin:1rem 0;
-    background: var(--white);
-    text-transform: none;
- }
- .product-display{
-    margin:2rem 0;
- }
- 
- .product-display .product-display-table{
-    width: 100%;
-    text-align: center;
- }
- 
- .product-display .product-display-table thead{
-    background: var(--bg-color);
- }
- 
- .product-display .product-display-table th{
-    padding:1rem;
-    font-size: 2rem;
- }
- 
- 
- .product-display .product-display-table td{
-    padding:1rem;
-    font-size: 2rem;
-    border-bottom: var(--border);
- }
- 
- .product-display .product-display-table .btn:first-child{
-    margin-top: 0;
- }
- 
- .product-display .product-display-table .btn:last-child{
-    background: crimson;
- }
- 
- .product-display .product-display-table .btn:last-child:hover{
-    background: var(--black);
- }
-  
- @media (max-width:991px){
- 
-    html{
-       font-size: 55%;
-    }
- 
- }
- 
- @media (max-width:768px){
- 
-    .product-display{
-       overflow-y:scroll;
-    }
- 
-    .product-display .product-display-table{
-       width: 80rem;
-    }
- 
- }
- 
- @media (max-width:450px){
- 
-    html{
-       font-size: 50%;
-    }
- 
- }
- 
+body
+{
+    background-color: #000000;
+    background-image: url('../images/auction.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Dark-themed CSS for the table */
+.product-display {
+   margin: 2rem auto; /* Center the table horizontally */
+   color: antiquewhite;
+   background-color: rgba(0, 0, 0, 0.8); /* Full dark background with 80% opacity */
+   max-width: 800px; /* Set maximum width for the table */
+   padding: 20px;
+   border-radius: 10px; /* Add some rounded corners */
+   display: flex; /* Use flexbox for centering */
+   justify-content: center; /* Center horizontally */
+   align-items: center; /* Center vertically */
+   flex-direction: column; /* Stack children vertically */
+}
+
+.product-display .product-display-table {
+   width: 100%;
+   text-align: center;
+   border-collapse: collapse;
+}
+
+.product-display .product-display-table thead {
+   background: rgba(0, 0, 0, 0.6); /* Dark background for heading with 60% opacity */
+   color: #ffffff; /* White text color */
+   font-size: 1.6rem; /* Adjust font size for the heading */
+}
+
+.product-display .product-display-table th,
+.product-display .product-display-table td {
+   padding: 0.8rem; /* Adjust padding */
+   font-size: 1.4rem; /* Adjust font size for table cells */
+   border-bottom: 1px solid #ffffff; /* White border bottom */
+   width: 20%; /* Adjust the width of table cells */
+}
+
+
+.product-display .product-display-table .btn {
+   font-size: 1.2rem; /* Adjust font size for buttons */
+   padding: 0.5rem 1rem; /* Adjust padding for buttons */
+   margin-top: 0.5rem; /* Adjust margin top for buttons */
+   width: 100%; /* Make the button occupy the full width of the table cell */
+   display: inline-block;
+   cursor: pointer;
+   border-radius: .3rem; /* Adjust border radius */
+   background: #1e5f31; /* Green background color */
+   color: #ffffff; /* White text color */
+   text-align: center;
+   text-decoration: none;
+}
+
+.product-display .product-display-table .btn:last-child {
+   background: crimson;
+}
+
+.product-display .product-display-table .btn:last-child:hover {
+   background: #191919; /* Darker background on hover */
+}
+
+.product-display .product-display-table .image-container {
+   width: 80px;
+   height: 80px;
+   overflow: hidden;
+   border-radius: 50%;
+   display: flex; /* Use flexbox */
+   justify-content: center; /* Center horizontally */
+   align-items: center; /* Center vertically */
+}
+
+.product-display .product-display-table .image-container img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* Button styles */
+.btn {
+   display: inline-block;
+   cursor: pointer;
+   border-radius: .3rem; /* Adjust border radius */
+   background: #1e5f31; /* Green background color */
+   color: #ffffff; /* White text color */
+   text-align: center;
+   text-decoration: none;
+}
+
+.btn:hover {
+   background: #191919; /* Darker background on hover */
+}
+
+/* Dark-themed CSS for the form */
+.container {
+   max-width: 600px; /* Set maximum width for the container */
+   margin: 2rem auto; /* Center the form horizontally */
+   padding: 20px;
+   background-color: rgba(0, 0, 0, 0.8); /* Full dark background with 80% opacity */
+   border-radius: 10px; /* Add some rounded corners */
+   color: antiquewhite; /* Text color */
+   display: flex; /* Use flexbox */
+   flex-direction: column; /* Stack children vertically */
+   align-items: center; /* Center items horizontally */
+}
+
+.admin_product_form_container {
+   text-align: center;
+   width: 100%; /* Take up full width */
+   max-width: 500px; /* Limit maximum width */
+}
+
+.admin_product_form_container form {
+   width: 100%; /* Take up full width */
+   display: flex; /* Use flexbox */
+   flex-direction: column; /* Stack children vertically */
+   align-items: center; /* Center items horizontally */
+}
+
+.admin_product_form_container h3 {
+   font-size: 2rem; /* Heading font size */
+   margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.box {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 20px;
+   font-size: 1.4rem; /* Input font size */
+   border-radius: 5px; /* Rounded corners */
+   background-color: #242424; /* Dark background color */
+   color: #ffffff; /* Text color */
+   border: none; /* Remove border */
+}
+
+.box::placeholder {
+   color: #d8d8d8; /* Placeholder color */
+}
+
+.btn {
+   width: 100%;
+   padding: 12px;
+   font-size: 1.4rem; /* Button font size */
+   border: none;
+   border-radius: 5px;
+   background-color: #1e5f31; /* Green background color */
+   color: #ffffff; /* Text color */
+   cursor: pointer;
+   transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+   background-color: #134022; /* Darker background color on hover */
+}
+
+.alert {
+   padding: 12px;
+   margin-bottom: 20px;
+   border-radius: 5px;
+}
+
+.alert-danger {
+   background-color: #800000; /* Dark red background color */
+}
+
+.alert-success {
+   background-color: #006400; /* Dark green background color */
+}
+

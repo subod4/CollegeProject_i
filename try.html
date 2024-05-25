@@ -4,12 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+
+    #hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url('../images/bi'); /* URL of your background image */
+      background-size: cover; /* Adjust background size as needed */
+      /* background-attachment: fixed; */
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 600px; /* Adjust max-width as needed */
+      padding: 20px;
+    }
+
+    .hero-container h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero-container p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      /* Add your button styles here */
+    }
   </style>
   <title>User preview</title>
 </head>
-  <body>
-    <section id = "header">
-        
-    </section>
-  </body>
+<body>
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Bid, Win, Thrill!</h1>
+      <p>Uncover rare finds, place secure bids, and win unique treasures.<br>Elevate your collecting experience today!</p>
+      <a href="#" class="btn">Get Started</a> 
+    </div>
+  </section>
+</body>
 </html>
+
+
